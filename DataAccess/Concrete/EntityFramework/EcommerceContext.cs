@@ -1,4 +1,5 @@
 ﻿using Entities.Concrete;
+using Entities.Concrete.Trendyol;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Concrete.EntityFramework
@@ -10,6 +11,7 @@ namespace DataAccess.Concrete.EntityFramework
             optionsBuilder.UseSqlServer(@"Server=DESKTOP-DJM0J96\SQLSERVER2017EXP;Database=Ecommerce;Trusted_Connection=true");
         }
         public DbSet<Product> Products { get; set; }
-        public DbSet<Decription> Descriptions { get; set; }
+        public DbSet<Description> Descriptions { get; set; }
+        public DbSet<Category> TrendyolCategories { get; set; }
     }
 }
