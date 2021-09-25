@@ -8,12 +8,11 @@ using System.Threading.Tasks;
 
 namespace Entities.Concrete.Trendyol
 {
-    public class Category:IEntity
+    public class Brand:IEntity
     {
         [Key]
         public int Id { get; set; }
-        public int CategoryId { get; set; }
-        public string CategoryName { get; set; }
-        public int ParentId { get; set; }
+        public int BrandId { get; set; }
+        public string BrandName { get; set; }
     }
 }
