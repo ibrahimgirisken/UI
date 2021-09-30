@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-   public class EfBebejiProductDescriptionDal:EfEntityRepositoryBase<BebejiDescription, EcommerceContext>,IBebejiDescriptionDal
+   public class EfBebejiProductDescriptionDal:EfEntityRepositoryBase<BebejiDescription, EcommerceContext>,IBebejiProductDescriptionDal
     {
     }
 }
