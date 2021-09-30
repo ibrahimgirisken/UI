@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfProductDal:EfEntityRepositoryBase<Product,EcommerceContext>,IProductDal
+    public class EfBebejiProductDal:EfEntityRepositoryBase<BebejiProduct,EcommerceContext>,IBebejiProductDal
     {
      
     }

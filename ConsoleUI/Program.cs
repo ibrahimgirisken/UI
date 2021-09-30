@@ -1,4 +1,5 @@
-﻿using Business.Concrete;
+﻿using Business.Abstract;
+using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using System;
 
@@ -8,7 +9,18 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            ProductManager productManager = new ProductManager(new EfProductDal());
+            ITrendyolAttributeService service = new TrendyolAttributeManager(new EfTrendyolAttributeDal());
+            foreach (var attribute in service.GetAll())
+            {
+                Console.WriteLine("Özellik Adı : "+attribute.AttributeName + " Kategori Adı : " + attribute.CategoryId + " Zorunlu : " + attribute.Required);
+            }
+            Console.ReadLine();
+            //BebejiProductList();
+        }
+
+        private static void BebejiProductList()
+        {
+            IBebejiProductService productManager = new BebejiProductManager(new EfBebejiProductDal());
             foreach (var product in productManager.GetAll())
             {
                 Console.WriteLine(product.ProductName);

@@ -6,16 +6,16 @@ using System.Collections.Generic;
 
 namespace Business.Concrete
 {
-    public class ProductManager : IProductService
+    public class BebejiProductManager : IBebejiProductService
     {
-        IProductDal _productDal;
+        IBebejiProductDal _productDal;
 
-        public ProductManager(IProductDal productDal)
+        public BebejiProductManager(IBebejiProductDal productDal)
         {
             _productDal = productDal;
         }
 
-        public List<Product> GetAll()
+        public List<BebejiProduct> GetAll()
         {
             return _productDal.GetAll();
         }

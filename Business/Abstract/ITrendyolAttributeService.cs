@@ -1,4 +1,4 @@
-﻿using Entities.Concrete;
+﻿using Entities.Concrete.Trendyol;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface IProductService
+    public interface ITrendyolAttributeService
     {
-        List<Product> GetAll();
+        List<TrendyolAttribute> GetAll();
     }
 }

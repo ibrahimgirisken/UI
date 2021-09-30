@@ -8,12 +8,11 @@ using System.Threading.Tasks;
 
 namespace Entities.Concrete.Trendyol
 {
-   public class AttributeValue:IEntity
+    public class TrendyolProduct:IEntity
     {
         [Key]
         public int Id { get; set; }
-        public int AttributeValueId { get; set; }
-        public string AttributeValueName { get; set; }
-        public int AttributeId { get; set; }
+        [MaxLength(15)]
+        public string Barcode { get; set; }
     }
 }

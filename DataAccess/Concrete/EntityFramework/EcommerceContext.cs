@@ -1,7 +1,7 @@
 ﻿using Entities.Concrete;
 using Entities.Concrete.Trendyol;
 using Microsoft.EntityFrameworkCore;
-using Product = Entities.Concrete.Trendyol.Product;
+using TrendyolProduct = Entities.Concrete.Trendyol.TrendyolProduct;
 
 namespace DataAccess.Concrete.EntityFramework
 {
@@ -11,11 +11,11 @@ namespace DataAccess.Concrete.EntityFramework
         {
             optionsBuilder.UseSqlServer(@"Server=DESKTOP-DJM0J96\SQLSERVER2017EXP;Database=Ecommerce;Trusted_Connection=true");
         }
-        public DbSet<Description> BebejiDescriptions { get; set; }
-        public DbSet<Category> TrendyolCategories { get; set; }
-        public DbSet<Brand> TrendyolBrands { get; set; }
-        public DbSet<Attribute> TrendyolAttributes { get; set; }
-        public DbSet<AttributeValue> TrendyolAttributesValue { get; set; }
-        public DbSet<Product> TrendyolProducts { get; set; }
+        public DbSet<BebejiDescription> BebejiDescriptions { get; set; }
+        public DbSet<TrendyolCategory> TrendyolCategories { get; set; }
+        public DbSet<TrendyolBrand> TrendyolBrands { get; set; }
+        public DbSet<TrendyolAttribute> TrendyolAttributes { get; set; }
+        public DbSet<TrendyolAttributeValue> TrendyolAttributesValue { get; set; }
+        public DbSet<TrendyolProduct> TrendyolProducts { get; set; }
     }
 }
