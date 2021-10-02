@@ -14,10 +14,10 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductsController : ControllerBase
+    public class TrendyolAttributesController : ControllerBase
     {
         ITrendyolAttributeService _trendyolAttributeService;
-        public ProductsController(ITrendyolAttributeService trendyolAttributeService)
+        public TrendyolAttributesController(ITrendyolAttributeService trendyolAttributeService)
         {
             this._trendyolAttributeService = trendyolAttributeService;
         }
