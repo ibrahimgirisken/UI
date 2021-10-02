@@ -1,4 +1,8 @@
-﻿using Entities.Concrete;
+﻿using Business.Abstract;
+using Business.Concrete;
+using DataAccess.Concrete.EntityFramework;
+using Entities.Concrete;
+using Entities.Concrete.Trendyol;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,15 +16,16 @@ namespace WebAPI.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        [HttpGet]
-        public List<BebejiProduct> Get()
+        ITrendyolAttributeService _trendyolAttributeService;
+        public ProductsController(ITrendyolAttributeService trendyolAttributeService)
         {
-            return new List<BebejiProduct>
-            {
-                new BebejiProduct{Id=1,ProductName="Elma"},
-                new BebejiProduct{Id=2,ProductName="Armut"},
-                new BebejiProduct{Id=2,ProductName="Karpuz"}
-            };
+            this._trendyolAttributeService = trendyolAttributeService;
+        }
+
+        [HttpGet]
+        public List<TrendyolAttribute> Get()
+        {
+            return _trendyolAttributeService.GetAll();
         }
     }
 }
