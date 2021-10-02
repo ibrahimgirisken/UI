@@ -15,7 +15,12 @@ namespace WebAPI.Controllers
         [HttpGet]
         public List<BebejiProduct> Get()
         {
-            return "Merhaba";
+            return new List<BebejiProduct>
+            {
+                new BebejiProduct{Id=1,ProductName="Elma"},
+                new BebejiProduct{Id=2,ProductName="Armut"},
+                new BebejiProduct{Id=2,ProductName="Karpuz"}
+            };
         }
     }
 }
