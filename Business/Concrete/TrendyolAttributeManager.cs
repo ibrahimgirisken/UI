@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete.Trendyol;
 using System;
@@ -18,9 +19,10 @@ namespace Business.Concrete
             _trendyolAttributeDal = trendyolAttributeDal;
         }
 
-        public void Add(TrendyolAttribute trendyolAttribute)
+        public IResult Add(TrendyolAttribute trendyolAttribute)
         {
             _trendyolAttributeDal.Add(trendyolAttribute);
+            return new SuccessResult("Özellik eklendi");
         }
 
         public List<TrendyolAttribute> GetAll()

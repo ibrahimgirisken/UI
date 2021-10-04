@@ -1,4 +1,5 @@
-﻿using Entities.Concrete.Trendyol;
+﻿using Core.Utilities.Results;
+using Entities.Concrete.Trendyol;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,6 @@ namespace Business.Abstract
     public interface ITrendyolAttributeService
     {
         List<TrendyolAttribute> GetAll();
-        void Add(TrendyolAttribute trendyolAttribute);
+        IResult Add(TrendyolAttribute trendyolAttribute);
     }
 }
