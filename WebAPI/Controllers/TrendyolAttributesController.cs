@@ -27,5 +27,12 @@ namespace WebAPI.Controllers
         {
             return _trendyolAttributeService.GetAll();
         }
+
+        [HttpPost]
+        public string AttributeAdd(TrendyolAttribute trendyolAttribute)
+        {
+            _trendyolAttributeService.Add(trendyolAttribute);
+            return "Kayıt edildi";
+        }
     }
 }

@@ -10,5 +10,6 @@ namespace Business.Abstract
     public interface ITrendyolAttributeService
     {
         List<TrendyolAttribute> GetAll();
+        void Add(TrendyolAttribute trendyolAttribute);
     }
 }

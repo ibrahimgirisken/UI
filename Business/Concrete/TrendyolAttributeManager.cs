@@ -18,6 +18,11 @@ namespace Business.Concrete
             _trendyolAttributeDal = trendyolAttributeDal;
         }
 
+        public void Add(TrendyolAttribute trendyolAttribute)
+        {
+            _trendyolAttributeDal.Add(trendyolAttribute);
+        }
+
         public List<TrendyolAttribute> GetAll()
         {
             return _trendyolAttributeDal.GetAll();
