@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete.Trendyol;
@@ -25,9 +26,9 @@ namespace Business.Concrete
             return new SuccessResult("Özellik eklendi");
         }
 
-        public List<TrendyolAttribute> GetAll()
+        public IDataResult<List<TrendyolAttribute>> GetAll()
         {
-            return _trendyolAttributeDal.GetAll();
+            return new SuccessDataResult<List<TrendyolAttribute>>(_trendyolAttributeDal.GetAll(), Messages.AttributeList);
         }
     }
 }

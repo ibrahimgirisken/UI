@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constants;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -15,9 +17,9 @@ namespace Business.Concrete
             _productDal = productDal;
         }
 
-        public List<BebejiProduct> GetAll()
+        public IDataResult<List<BebejiProduct>> GetAll()
         {
-            return _productDal.GetAll();
+            return new SuccessDataResult<List<BebejiProduct>>(_productDal.GetAll(),Messages.ProductList);
         }
     }
 }

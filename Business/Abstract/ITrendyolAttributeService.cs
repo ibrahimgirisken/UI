@@ -10,7 +10,7 @@ namespace Business.Abstract
 {
     public interface ITrendyolAttributeService
     {
-        List<TrendyolAttribute> GetAll();
+        IDataResult<List<TrendyolAttribute>> GetAll();
         IResult Add(TrendyolAttribute trendyolAttribute);
     }
 }
