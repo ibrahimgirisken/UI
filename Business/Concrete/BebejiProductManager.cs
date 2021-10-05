@@ -19,7 +19,7 @@ namespace Business.Concrete
 
         public IDataResult<List<BebejiProduct>> GetAll()
         {
-            return new SuccessDataResult<List<BebejiProduct>>(_productDal.GetAll(),Messages.ProductList);
+            return new SuccessDataResult<List<BebejiProduct>>(_productDal.GetAll());
         }
     }
 }

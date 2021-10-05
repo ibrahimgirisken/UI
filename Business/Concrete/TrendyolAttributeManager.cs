@@ -28,7 +28,7 @@ namespace Business.Concrete
 
         public IDataResult<List<TrendyolAttribute>> GetAll()
         {
-            return new SuccessDataResult<List<TrendyolAttribute>>(_trendyolAttributeDal.GetAll(), Messages.AttributeList);
+            return new SuccessDataResult<List<TrendyolAttribute>>(_trendyolAttributeDal.GetAll().ToList(), Messages.AttributeList);
         }
     }
 }

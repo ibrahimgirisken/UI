@@ -1,5 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Concrete;
+using Business.Constants;
+using Core.Utilities.Results;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using Entities.Concrete.Trendyol;
@@ -23,16 +25,25 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
-        public List<TrendyolAttribute> Get()
+        public IActionResult GetAll()
         {
-            return _trendyolAttributeService.GetAll();
+         return Ok(_trendyolAttributeService.GetAll());
+            //if (result.Success)
+            //{
+            //    return Ok(result);
+            //}
+            //return BadRequest(result);
         }
 
         [HttpPost]
-        public string AttributeAdd(TrendyolAttribute trendyolAttribute)
+        public IActionResult AttributeAdd(TrendyolAttribute trendyolAttribute)
         {
-            _trendyolAttributeService.Add(trendyolAttribute);
-            return "Kayıt edildi";
+           var result= _trendyolAttributeService.Add(trendyolAttribute);
+            if (result.Success)
+            {
+                return Ok(result.Message);
+            }
+            return BadRequest(result);
         }
     }
 }
