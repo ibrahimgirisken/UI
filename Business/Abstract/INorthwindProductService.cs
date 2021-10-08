@@ -1,5 +1,4 @@
-﻿using Core.Utilities.Results;
-using Entities.Concrete;
+﻿using Entities.Concrete.Northwind;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface IBebejiProductService
+    public interface INorthwindProductService
     {
-        IDataResult<List<BebejiProduct>> GetAll();
+        public List<NorthwindProduct> GetAll();
     }
 }

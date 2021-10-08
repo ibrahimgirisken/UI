@@ -31,8 +31,8 @@ namespace WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddSingleton<ITrendyolAttributeService, TrendyolAttributeManager>();
-            services.AddSingleton<ITrendyolAttributeDal, EfTrendyolAttributeDal>();
+            services.AddSingleton<INorthwindProductService, NorthwindProductManager>();
+            services.AddSingleton<INorthwindProductDal, EfNorthwindProductDal>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPI", Version = "v1" });

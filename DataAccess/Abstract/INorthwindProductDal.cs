@@ -1,5 +1,5 @@
 ﻿using Core.DataAccess;
-using Entities.Concrete.Trendyol;
+using Entities.Concrete.Northwind;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    public interface ITrendyolAttributeDal:IEntityRepository<TrendyolAttribute>
+     public interface INorthwindProductDal:IEntityRepository<NorthwindProduct>
     {
     }
 }
