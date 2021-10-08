@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete.Northwind;
 using System;
@@ -18,9 +19,9 @@ namespace Business.Concrete
             _nortwindProductDal = nortwindProductDal;
         }
 
-        public List<NorthwindProduct> GetAll()
+        public IDataResult<List<NorthwindProduct>> GetAll()
         {
-           return _nortwindProductDal.GetAll();
+           return new SuccessDataResult<List<NorthwindProduct>>(_nortwindProductDal.GetAll(),"Ürünler listelendi");
         }
     }
 }

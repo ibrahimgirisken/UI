@@ -1,4 +1,5 @@
-﻿using Entities.Concrete.Northwind;
+﻿using Core.Utilities.Results;
+using Entities.Concrete.Northwind;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace Business.Abstract
 {
     public interface INorthwindProductService
     {
-        public List<NorthwindProduct> GetAll();
+        public IDataResult<List<NorthwindProduct>> GetAll();
     }
 }
