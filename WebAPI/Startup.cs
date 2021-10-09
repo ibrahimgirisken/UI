@@ -34,6 +34,8 @@ namespace WebAPI
             services.AddCors();
             services.AddSingleton<INorthwindProductService, NorthwindProductManager>();
             services.AddSingleton<INorthwindProductDal, EfNorthwindProductDal>();
+            services.AddSingleton<INorthwindCategoryService, NorthwindCategoryManager>();
+            services.AddSingleton<INorthwindCategoryDal, EfNorthwindCategoryDal>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPI", Version = "v1" });

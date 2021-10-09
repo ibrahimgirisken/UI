@@ -15,5 +15,6 @@ namespace DataAccess.Concrete.EntityFramework
             optionsBuilder.UseSqlServer(@"Server=DESKTOP-DJM0J96\SQLSERVER2017EXP;Database=Northwind;Trusted_Connection=true");
         }
         public DbSet<NorthwindProduct> Products { get; set; }
+        public DbSet<NorthwindCategory> Categories { get; set; }
     }
 }
