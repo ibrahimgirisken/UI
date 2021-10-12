@@ -19,11 +19,26 @@ namespace WebAPI.Controllers
         {
             _northwindAttributeService = northwindAttributeService;
         }
-        [HttpGet]
+        [HttpGet("getall")]
         public IActionResult GetAll()
         {
-            Thread.Sleep(5000);
-            return Ok(_northwindAttributeService.GetAll());
+            var result = _northwindAttributeService.GetAll();
+            if (result.Success)
+            {
+                return Ok(_northwindAttributeService.GetAll());
+            }
+            return BadRequest();
+        }
+
+        [HttpGet("getbycategory")]
+        public IActionResult GetByCategory(int categoryId)
+        {
+            var result = _northwindAttributeService.GetAllByCategoryId(categoryId);
+            if (result.Success)
+            {
+                return Ok(_northwindAttributeService.GetAllByCategoryId(categoryId));
+            }
+            return BadRequest();
         }
     }
 }

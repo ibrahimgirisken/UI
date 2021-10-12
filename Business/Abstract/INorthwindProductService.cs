@@ -11,5 +11,6 @@ namespace Business.Abstract
     public interface INorthwindProductService
     {
         public IDataResult<List<NorthwindProduct>> GetAll();
+        public IDataResult<List<NorthwindProduct>> GetAllByCategoryId(int categoryId);
     }
 }

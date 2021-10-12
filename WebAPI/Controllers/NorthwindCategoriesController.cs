@@ -19,10 +19,15 @@ namespace WebAPI.Controllers
             _northwindCategoryService = northwindCategoryService;
         }
 
-        [HttpGet]
+        [HttpGet("getall")]
         public IActionResult GetAll()
         {
-            return Ok(_northwindCategoryService.GetAll());
+            var result = _northwindCategoryService.GetAll();
+            if (result.Success)
+            {
+                return Ok(_northwindCategoryService.GetAll());
+            }
+            return BadRequest();
         }
     }
 }

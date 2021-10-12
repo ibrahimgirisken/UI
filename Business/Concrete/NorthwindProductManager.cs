@@ -23,5 +23,10 @@ namespace Business.Concrete
         {
            return new SuccessDataResult<List<NorthwindProduct>>(_nortwindProductDal.GetAll(),"Ürünler listelendi");
         }
+
+        public IDataResult<List<NorthwindProduct>> GetAllByCategoryId(int categoryId)
+        {
+            return new SuccessDataResult<List<NorthwindProduct>>(_nortwindProductDal.GetAll(p=>p.CategoryId==categoryId), "Kategoriye göre ürünler listelendi");
+        }
     }
 }
