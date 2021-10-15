@@ -1,6 +1,6 @@
 ﻿using Core.DataAccess;
-using DataAccess.Concrete.EntityFramework;
-using Entities.Concrete.Northwind;
+using Core.Utilities.Results;
+using Entities.Concrete.Yeditepe;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
-    public interface INorthwindCategoryDal:IEntityRepository<NorthwindCategory>
+    public interface IYeditepeDescriptionDal:IEntityRepository<YeditepeDescription>
     {
     }
 }

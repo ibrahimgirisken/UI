@@ -10,22 +10,22 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class NorthwindCategoriesController : ControllerBase
+    public class YeditepeCategoriesController : ControllerBase
     {
-        INorthwindCategoryService _northwindCategoryService;
+        IYeditepeCategoryService _yeditepeCategoryService;
 
-        public NorthwindCategoriesController(INorthwindCategoryService northwindCategoryService)
+        public YeditepeCategoriesController(IYeditepeCategoryService yeditepeCategoryService)
         {
-            _northwindCategoryService = northwindCategoryService;
+            _yeditepeCategoryService = yeditepeCategoryService;
         }
 
         [HttpGet("getall")]
         public IActionResult GetAll()
         {
-            var result = _northwindCategoryService.GetAll();
+            var result = _yeditepeCategoryService.getAll();
             if (result.Success)
             {
-                return Ok(_northwindCategoryService.GetAll());
+                return Ok(_yeditepeCategoryService.getAll());
             }
             return BadRequest();
         }

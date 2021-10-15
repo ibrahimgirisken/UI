@@ -11,21 +11,22 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class NorthwindProductsController : ControllerBase
+    public class YeditepeProductsController : ControllerBase
     {
-        INorthwindProductService _northwindAttributeService;
+        IYeditepeProductService _yeditepeAttributeService;
 
-        public NorthwindProductsController(INorthwindProductService northwindAttributeService)
+        public YeditepeProductsController(IYeditepeProductService yeditepeAttributeService)
         {
-            _northwindAttributeService = northwindAttributeService;
+            _yeditepeAttributeService = yeditepeAttributeService;
         }
+
         [HttpGet("getall")]
         public IActionResult GetAll()
         {
-            var result = _northwindAttributeService.GetAll();
+            var result = _yeditepeAttributeService.getAll();
             if (result.Success)
             {
-                return Ok(_northwindAttributeService.GetAll());
+                return Ok(_yeditepeAttributeService.getAll());
             }
             return BadRequest();
         }
@@ -33,10 +34,10 @@ namespace WebAPI.Controllers
         [HttpGet("getbycategory")]
         public IActionResult GetByCategory(int categoryId)
         {
-            var result = _northwindAttributeService.GetAllByCategoryId(categoryId);
+            var result = _yeditepeAttributeService.GetAllByCategoryId(categoryId);
             if (result.Success)
             {
-                return Ok(_northwindAttributeService.GetAllByCategoryId(categoryId));
+                return Ok(_yeditepeAttributeService.GetAllByCategoryId(categoryId));
             }
             return BadRequest();
         }

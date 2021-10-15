@@ -32,10 +32,14 @@ namespace WebAPI
         {
             services.AddControllers();
             services.AddCors();
-            services.AddSingleton<INorthwindProductService, NorthwindProductManager>();
-            services.AddSingleton<INorthwindProductDal, EfNorthwindProductDal>();
-            services.AddSingleton<INorthwindCategoryService, NorthwindCategoryManager>();
-            services.AddSingleton<INorthwindCategoryDal, EfNorthwindCategoryDal>();
+            services.AddSingleton<IYeditepeProductService, YeditepeProductManager>();
+            services.AddSingleton<IYeditepeProductDal, EfYeditepeProductDal>();
+            services.AddSingleton<IYeditepeBrandService, YeditepeBrandManager>();
+            services.AddSingleton<IYeditepeBrandDal, EfYeditepeBrandDal>();
+            services.AddSingleton<IYeditepeCategoryService, YeditepeCategoryManager>();
+            services.AddSingleton<IYeditepeCategoryDal, EfYeditepeCategoryDal>();
+            services.AddSingleton<IYeditepeDescriptionService, YeditepeDescriptionManager>();
+            services.AddSingleton<IYeditepeDescriptionDal, EfYeditepeDescriptionDal>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPI", Version = "v1" });

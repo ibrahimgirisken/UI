@@ -1,5 +1,5 @@
 ﻿using Core.Utilities.Results;
-using Entities.Concrete.Northwind;
+using Entities.Concrete.Yeditepe;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface INorthwindCategoryService
+    public interface IYeditepeDescriptionService
     {
-        IDataResult<List<NorthwindCategory>> GetAll();
+        IDataResult<List<YeditepeDescription>> getAll();
     }
 }
