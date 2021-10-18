@@ -15,5 +15,6 @@ namespace Entities.Concrete.Yeditepe
         public string CategoryName { get; set; }
         public int DisplayOrder { get; set; }
         public int ParentId { get; set; }
+        public string Url { get; set; }
     }
 }

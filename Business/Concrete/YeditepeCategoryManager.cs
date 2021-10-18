@@ -23,5 +23,10 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<YeditepeCategory>>(_yeditepeCategoryDal.GetAll(),"Ürünler listelendi");
         }
+
+        public void save(YeditepeCategory category)
+        {
+            _yeditepeCategoryDal.Add(category);
+        }
     }
 }

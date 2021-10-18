@@ -12,6 +12,7 @@ namespace Entities.Concrete.Bebeji
     {
         [Key]
         public int Id { get; set; }
+        public string ItemCode { get; set; }
         public int ProductId { get; set; }
         public string Barcode { get; set; }
         public string ErpCode { get; set; }

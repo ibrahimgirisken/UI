@@ -23,5 +23,10 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<YeditepeBrand>>(_yeditepeBrandDal.GetAll(), "Markalar listelendi");
         }
+
+        public void save(YeditepeBrand brand)
+        {
+            _yeditepeBrandDal.Add(brand);
+        }
     }
 }

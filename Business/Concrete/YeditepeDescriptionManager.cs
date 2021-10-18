@@ -23,5 +23,10 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<YeditepeDescription>>(_yeditepeDescriptionDal.GetAll(), "Açıklamalar listelendi");
         }
+
+        public void save(YeditepeDescription description)
+        {
+            _yeditepeDescriptionDal.Add(description);
+        }
     }
 }

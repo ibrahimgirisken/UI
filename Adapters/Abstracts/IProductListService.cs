@@ -9,6 +9,6 @@ namespace Adapters.Abstracts
 {
     public interface IProductListService
     {
-        public Task<List<Product>> getAll();
+        public Task<List<Product>> getProductAll();
     }
 }

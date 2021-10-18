@@ -11,5 +11,6 @@ namespace Business.Abstract
      public interface IYeditepeBrandService
     {
         IDataResult<List<YeditepeBrand>> getAll();
+        void save(YeditepeBrand brand);
     }
 }

@@ -11,5 +11,6 @@ namespace Business.Abstract
     public interface IYeditepeDescriptionService
     {
         IDataResult<List<YeditepeDescription>> getAll();
+        void save(YeditepeDescription description);
     }
 }

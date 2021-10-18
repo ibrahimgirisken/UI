@@ -11,5 +11,6 @@ namespace Business.Abstract
     public interface IYeditepeCategoryService
     {
         IDataResult<List<YeditepeCategory>> getAll();
+        void save(YeditepeCategory category);
     }
 }
